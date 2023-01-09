@@ -1,13 +1,12 @@
 <script setup lang="ts">
+
 </script>
 <template>
-    <NuxtLayout>
-        <NuxtPage />
-    </NuxtLayout>
+
 </template>
 <script lang="ts">
 export default {
-    name: "App"
+    name: "TheFooter"
 }
 </script>
 <style scoped>

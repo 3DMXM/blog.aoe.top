@@ -1,15 +1,14 @@
 <script setup lang="ts">
+
 </script>
 <template>
-    <NuxtLayout>
-        <NuxtPage />
-    </NuxtLayout>
+    <h1>{{ $route.params.name }}</h1>
 </template>
 <script lang="ts">
 export default {
-    name: "App"
+    name: "web"
 }
 </script>
-<style scoped>
+<style lang="less" scoped>
 
 </style>
