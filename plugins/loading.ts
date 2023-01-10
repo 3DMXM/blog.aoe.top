@@ -1,28 +1,34 @@
-import { createDiscreteApi } from 'naive-ui';
-import { DiscreteApi, DiscreteApiType } from 'naive-ui/es/discrete/src/interface';
+// import { createDiscreteApi } from 'naive-ui';
+// import { DiscreteApi, DiscreteApiType } from 'naive-ui/es/discrete/src/interface';
+
+import { ElLoading } from 'element-plus'
+
 
 export default defineNuxtPlugin(nuxtApp => {
     let bar = ref<any>(null)
     nuxtApp.hook("app:beforeMount", (app) => {
         if (!bar.value) {
-            let { loadingBar } = createDiscreteApi(['loadingBar']);
-            bar.value = loadingBar
+            bar.value = ElLoading.service({
+                lock: true,
+                text: '加载中...',
+                spinner: 'el-icon-loading',
+            })
         }
-
     })
 
     nuxtApp.hook("page:start", (app) => {
-        bar.value.start()
+        bar.value?.close()
+
     })
     nuxtApp.hook("page:finish", (app) => {
         setTimeout(() => {
-            bar.value.finish()
+            bar.value?.close()
         }, 150)
     })
 
-    // nuxtApp.hook("app:mounted", (app) => {
-    //     setTimeout(() => {
-    //         bar.value.finish()
-    //     }, 150)
-    // })
+    nuxtApp.hook("app:mounted", (app) => {
+        bar.value?.service({
+            lock: false
+        })
+    })
 })

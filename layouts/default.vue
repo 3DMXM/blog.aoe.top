@@ -1,20 +1,31 @@
 <script setup lang="ts">
-import { darkTheme, zhCN, dateZhCN } from "naive-ui";
-import { NConfigProvider, NGlobalStyle } from "naive-ui";
+
+// html 添加 dark
+// let html = document.querySelector('html')
+// html?.classList.add('dark')
+
 </script>
 <template>
-    <n-config-provider inline-theme-disabled :theme="darkTheme" :locale="zhCN" :date-locale="dateZhCN">
-        <n-global-style />
-        <TheHeader />
-        <slot></slot>
-        <TheFooter />
-    </n-config-provider>
+    <div class="common-layout">
+        <SeoKit />
+        <el-container>
+            <el-header>
+                <TheHeader />
+            </el-header>
+            <el-main>
+                <slot></slot>
+            </el-main>
+            <el-footer>
+                <TheFooter />
+            </el-footer>
+        </el-container>
+    </div>
 </template>
 <script lang="ts">
 export default {
     name: "layout",
 };
 </script>
-<style scoped>
+<style lang="less" scoped>
 
 </style>

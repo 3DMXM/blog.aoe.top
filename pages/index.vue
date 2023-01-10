@@ -6,7 +6,6 @@ useHead({
         { name: 'keywords', content: '小莫的博客园,编程,技术分享,web,c++,c#,python,nodejs,' }
     ],
 })
-
 </script>
 <template>
     <h1>首页</h1>

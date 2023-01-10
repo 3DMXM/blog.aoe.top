@@ -2,25 +2,22 @@
 export default defineNuxtConfig({
     css: ['@/assets/main.less'],
     modules: [
-        '@nuxt/content'
+        '@nuxt/content',
+        '@element-plus/nuxt'
     ],
-    build: {
-        transpile:
-            process.env.NODE_ENV === 'production'
-                ? [
-                    'naive-ui',
-                    'vueuc',
-                    '@css-render/vue3-ssr',
-                    '@juggle/resize-observer'
-                ]
-                : ['@juggle/resize-observer']
-    },
-    vite: {
-        optimizeDeps: {
-            include:
-                process.env.NODE_ENV === 'development'
-                    ? ['naive-ui', 'vueuc', 'date-fns-tz/esm/formatInTimeZone']
-                    : []
+    extends: [
+        'nuxt-seo-kit'
+    ],
+    runtimeConfig: {
+        public: {
+            siteUrl: 'https://blog.aoe.top',
+            siteName: '小莫的博客园',
+            siteDescription: '欢迎来到小莫的博客园，时不时的分享一些可能用得到的东西，偶尔也会放一些有用的资源，或者一些实用的教程，没事了记得来逛逛呀.',
+            language: 'zh-cn',
+            titleSeparator: '·',
         }
-    }
+    },
+    elementPlus: {
+        themes: ['dark']
+    },
 })
