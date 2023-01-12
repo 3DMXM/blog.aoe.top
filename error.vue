@@ -20,23 +20,17 @@ let title = computed(() => {
     }
 })
 
+console.log(props.error);
+
 </script>
 <template>
-    <NuxtLayout>
+    <div>
         <el-result icon="error" title="错误" :sub-title="title">
             <template #extra>
                 <el-button type="primary" @click="handleError">返回首页</el-button>
             </template>
         </el-result>
-        <!-- <el-empty>
-            <el-col :sm="12" :lg="6">
-
-                <el-button type="primary" :description="title" @click="handleError">返回首页</el-button>
-        </el-empty> -->
-        <!-- <div class="err">
-            <el-button type="success" @click="handleError">返回首页</el-button>
-        </div> -->
-    </NuxtLayout>
+    </div>
 
 </template>
 <script lang="ts">

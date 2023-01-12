@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import 'nprogress/nprogress.css';
+
 </script>
 <template>
     <NuxtLayout>

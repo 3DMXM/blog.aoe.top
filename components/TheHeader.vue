@@ -2,9 +2,6 @@
 import { Home } from "@vicons/ionicons5"
 import { Tools } from "@vicons/carbon"
 import { WebhookFilled } from "@vicons/material"
-import { ElIcon } from "element-plus";
-
-// let activeKey = ref(null)
 
 let menuOptions = [
     {
@@ -122,7 +119,8 @@ let menuOptions = [
 
 function renderRouterLink(to: any, label: string) {
     return {
-        to, label
+        to,
+        label
     }
 }
 function readerLink(to: string, label: string) {
@@ -130,26 +128,25 @@ function readerLink(to: string, label: string) {
         to, label, target: '_blank'
     }
 }
-function renderIcon(icon: any) {
-    return () => h(ElIcon, null, { default: () => h(icon) })
+
+
+function log(text: string) {
+    console.log(text)
 }
 
-const handleSelect = (key: string, keyPath: string[]) => {
-    console.log(key, keyPath)
-}
 const activeIndex = ref('1')
 </script>
 <template>
     <el-container>
-        <el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal" @select="handleSelect">
-            <template v-for="item in menuOptions">
+        <el-menu :default-active="$route.path" class="el-menu-demo" mode="horizontal" router>
+            <template v-for="item in menuOptions" :key="item.key">
                 <el-sub-menu v-if="item.children" :index="item.key">
                     <template #title> {{ item.label }} </template>
-                    <el-menu-item v-for="child in item.children" :index="child.key" :router="child.label.to">
+                    <el-menu-item v-for="child in item.children" :key="child.key" :index="child.label.to">
                         {{ child.label.label }}
                     </el-menu-item>
                 </el-sub-menu>
-                <el-menu-item v-else :index="item.key" :route="item.label.to">
+                <el-menu-item v-else :index="item.label.to">
                     {{ item.label.label }}
                 </el-menu-item>
             </template>

@@ -1,24 +1,29 @@
 <script setup lang="ts">
 
-// html 添加 dark
-// let html = document.querySelector('html')
-// html?.classList.add('dark')
+useHead({
+    htmlAttrs: {
+        lang: 'zh-CN',
+        class: 'dark',
+    },
+})
 
 </script>
 <template>
     <div class="common-layout">
-        <SeoKit />
-        <el-container>
-            <el-header>
-                <TheHeader />
-            </el-header>
-            <el-main>
-                <slot></slot>
-            </el-main>
-            <el-footer>
-                <TheFooter />
-            </el-footer>
-        </el-container>
+        <el-config-provider namespace="el">
+            <SeoKit />
+            <el-container>
+                <el-header>
+                    <TheHeader />
+                </el-header>
+                <el-main>
+                    <slot></slot>
+                </el-main>
+                <el-footer>
+                    <TheFooter />
+                </el-footer>
+            </el-container>
+        </el-config-provider>
     </div>
 </template>
 <script lang="ts">
