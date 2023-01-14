@@ -1,30 +1,33 @@
 <script setup lang="ts">
-
+import { useTheme } from "vuetify";
 useHead({
     htmlAttrs: {
         lang: 'zh-CN',
-        class: 'dark',
     },
 })
 
+const theme = useTheme();
+theme.global.name.value = "dark";
 </script>
 <template>
-    <div class="common-layout">
-        <el-config-provider namespace="el">
-            <SeoKit />
-            <el-container>
-                <el-header>
-                    <TheHeader />
-                </el-header>
-                <el-main>
-                    <slot></slot>
-                </el-main>
-                <el-footer>
-                    <TheFooter />
-                </el-footer>
-            </el-container>
-        </el-config-provider>
-    </div>
+    <v-app>
+        <v-main class="layout">
+            <BaseTheHeader />
+            <v-container>
+                <BaseWelcome />
+                <v-row>
+                    <v-col cols="4">
+                        <LayoutsSidebar />
+                    </v-col>
+                    <v-col cols="8">
+                        <slot></slot>
+                    </v-col>
+                </v-row>
+
+            </v-container>
+            <BaseTheFooter />
+        </v-main>
+    </v-app>
 </template>
 <script lang="ts">
 export default {

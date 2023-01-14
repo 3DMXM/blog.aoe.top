@@ -1,9 +1,8 @@
 import NProgress from 'nprogress';
 
-
 export default defineNuxtPlugin(nuxtApp => {
     let bar = ref<any>(null)
-    nuxtApp.hook("app:beforeMount", (app) => {
+    nuxtApp.hook("app:beforeMount", () => {
         if (!bar.value) {
             bar.value = NProgress.configure({
                 easing: 'ease',
@@ -15,22 +14,22 @@ export default defineNuxtPlugin(nuxtApp => {
         }
     })
 
-    nuxtApp.hook("page:start", (app) => {
+    nuxtApp.hook("page:start", () => {
         bar.value?.start()
 
     })
-    nuxtApp.hook("page:finish", (app) => {
+    nuxtApp.hook("page:finish", () => {
         setTimeout(() => {
             bar.value?.done()
         }, 150)
     })
 
-    nuxtApp.hook("app:mounted", (app) => {
+    nuxtApp.hook("app:mounted", () => {
         setTimeout(() => {
             bar.value?.done()
         }, 150)
     })
-    nuxtApp.hook("app:error", (app) => {
+    nuxtApp.hook("app:error", () => {
         // 判断是否是客户端
         if (process.client) {
             bar.value?.done()

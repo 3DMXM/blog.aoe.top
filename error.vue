@@ -15,7 +15,7 @@ let title = computed(() => {
             return '500 服务器错误'
             break;
         default:
-            return '出错了'
+            return props.error
             break;
     }
 })
@@ -25,11 +25,7 @@ console.log(props.error);
 </script>
 <template>
     <div>
-        <el-result icon="error" title="错误" :sub-title="title">
-            <template #extra>
-                <el-button type="primary" @click="handleError">返回首页</el-button>
-            </template>
-        </el-result>
+        {{ error }}
     </div>
 
 </template>

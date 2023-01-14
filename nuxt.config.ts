@@ -1,13 +1,15 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-    css: ['@/assets/main.less'],
+    css: ['@/assets/main.less', 'vuetify/styles', '@mdi/font/css/materialdesignicons.css'],
     modules: [
-        '@nuxt/content',
-        '@element-plus/nuxt'
+        // '@pinia/nuxt'
     ],
     extends: [
         'nuxt-seo-kit'
     ],
+    build: {
+        transpile: ['vuetify'],
+    },
     runtimeConfig: {
         public: {
             siteUrl: 'https://blog.aoe.top',

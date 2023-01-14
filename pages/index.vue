@@ -8,7 +8,9 @@ useHead({
 })
 </script>
 <template>
-    <h1>首页</h1>
+    <div class="index">
+        Index
+    </div>
 </template>
 <script lang="ts">
 export default {
