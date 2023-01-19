@@ -3,6 +3,7 @@ export default defineNuxtConfig({
     css: ['@/assets/main.less', 'vuetify/styles', '@mdi/font/css/materialdesignicons.css'],
     modules: [
         // '@pinia/nuxt'
+        '@nuxtjs/axios',
     ],
     extends: [
         'nuxt-seo-kit'
@@ -22,4 +23,9 @@ export default defineNuxtConfig({
     elementPlus: {
         themes: ['dark']
     },
+    axios: {
+        // 是否可以跨域
+        proxy: true,
+        // baseUr: 'https://blog.aoe.top',
+    }
 })

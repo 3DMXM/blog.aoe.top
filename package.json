@@ -17,8 +17,12 @@
   "dependencies": {
     "@css-render/vue3-ssr": "^0.15.12",
     "@mdi/font": "^7.1.96",
+    "@nuxtjs/axios": "^5.13.6",
+    "@types/marked": "^4.0.8",
     "axios": "^1.2.2",
     "d3": "^7.8.1",
+    "github-markdown-css": "^5.1.0",
+    "marked": "^4.2.12",
     "nprogress": "^0.2.0",
     "vuetify": "^3.1.1"
   }

@@ -243,6 +243,13 @@
     "@babel/helper-plugin-utils" "^7.20.2"
     "@babel/plugin-syntax-typescript" "^7.20.0"
 
+"@babel/runtime@^7.15.4":
+  "integrity" "sha512-UF0tvkUtxwAgZ5W/KrkHf0Rn0fdnLDU9ScxBrEVNUprE/MzirjK4MJUX1/BVDv00Sv8cljtukVK1aky++X1SjQ=="
+  "resolved" "https://mirrors.cloud.tencent.com/npm/@babel%2fruntime/-/runtime-7.20.7.tgz"
+  "version" "7.20.7"
+  dependencies:
+    "regenerator-runtime" "^0.13.11"
+
 "@babel/standalone@^7.20.11":
   "integrity" "sha512-hK/X+m1il3w1tYS4H8LDaGCEdiT47SVqEXY8RiEAgou26BystipSU8ZL6EvBR6t5l7lTv0ilBiChXWblKJ5iUA=="
   "resolved" "https://mirrors.cloud.tencent.com/npm/@babel%2fstandalone/-/standalone-7.20.12.tgz"
@@ -520,6 +527,24 @@
     "vite-node" "^0.25.2"
     "vite-plugin-checker" "^0.5.1"
     "vue-bundle-renderer" "^1.0.0"
+
+"@nuxtjs/axios@^5.13.6":
+  "integrity" "sha512-XS+pOE0xsDODs1zAIbo95A0LKlilvJi8YW0NoXYuq3/jjxGgWDxizZ6Yx0AIIjZOoGsXJOPc0/BcnSEUQ2mFBA=="
+  "resolved" "https://mirrors.cloud.tencent.com/npm/@nuxtjs%2faxios/-/axios-5.13.6.tgz"
+  "version" "5.13.6"
+  dependencies:
+    "@nuxtjs/proxy" "^2.1.0"
+    "axios" "^0.21.1"
+    "axios-retry" "^3.1.9"
+    "consola" "^2.15.3"
+    "defu" "^5.0.0"
+
+"@nuxtjs/proxy@^2.1.0":
+  "integrity" "sha512-/qtoeqXgZ4Mg6LRg/gDUZQrFpOlOdHrol/vQYMnKu3aN3bP90UfOUB3QSDghUUK7OISAJ0xp8Ld78aHyCTcKCQ=="
+  "resolved" "https://mirrors.cloud.tencent.com/npm/@nuxtjs%2fproxy/-/proxy-2.1.0.tgz"
+  "version" "2.1.0"
+  dependencies:
+    "http-proxy-middleware" "^1.0.6"
 
 "@rollup/plugin-alias@^4.0.2":
   "integrity" "sha512-1hv7dBOZZwo3SEupxn4UA2N0EDThqSSS+wI1St1TNTBtOZvUchyIClyHcnDcjjrReTPZ47Faedrhblv4n+T5UQ=="
@@ -822,6 +847,18 @@
   "integrity" "sha512-Nmh0K3iWQJzniTuPRcJn5hxXkfB1T1pgB89SBig5PlJQU5yocazeu4jATJlaA0GYFKWMqDdvYemoSnF2pXgLVA=="
   "resolved" "https://mirrors.cloud.tencent.com/npm/@types%2fgeojson/-/geojson-7946.0.10.tgz"
   "version" "7946.0.10"
+
+"@types/http-proxy@^1.17.5":
+  "integrity" "sha512-QsbSjA/fSk7xB+UXlCT3wHBy5ai9wOcNDWwZAtud+jXhwOM3l+EYZh8Lng4+/6n8uar0J7xILzqftJdJ/Wdfkw=="
+  "resolved" "https://mirrors.cloud.tencent.com/npm/@types%2fhttp-proxy/-/http-proxy-1.17.9.tgz"
+  "version" "1.17.9"
+  dependencies:
+    "@types/node" "*"
+
+"@types/marked@^4.0.8":
+  "integrity" "sha512-HVNzMT5QlWCOdeuBsgXP8EZzKUf0+AXzN+sLmjvaB3ZlLqO+e4u0uXrdw9ub69wBKFs+c6/pA4r9sy6cCDvImw=="
+  "resolved" "https://mirrors.cloud.tencent.com/npm/@types%2fmarked/-/marked-4.0.8.tgz"
+  "version" "4.0.8"
 
 "@types/node@*", "@types/node@>= 14":
   "integrity" "sha512-DHQpWGjyQKSHj3ebjFI/wRKcqQcdR+MoFBygntYOZytCqNfkd2ZC4ARDJ2DQqhjH5p85Nnd3jhUJIXrszFX/JA=="
@@ -1218,6 +1255,21 @@
     "normalize-range" "^0.1.2"
     "picocolors" "^1.0.0"
     "postcss-value-parser" "^4.2.0"
+
+"axios-retry@^3.1.9":
+  "integrity" "sha512-RohAUQTDxBSWLFEnoIG/6bvmy8l3TfpkclgStjl5MDCMBDgapAWCmr1r/9harQfWC8bzLC8job6UcL1A1Yc+/Q=="
+  "resolved" "https://mirrors.cloud.tencent.com/npm/axios-retry/-/axios-retry-3.3.1.tgz"
+  "version" "3.3.1"
+  dependencies:
+    "@babel/runtime" "^7.15.4"
+    "is-retry-allowed" "^2.2.0"
+
+"axios@^0.21.1":
+  "integrity" "sha512-ut5vewkiu8jjGBdqpM44XxjuCjq9LAKeHVmoVfHVzy8eHgxxq8SbAVQNovDA8mVi05kP0Ea/n/UzcSHcTJQfNg=="
+  "resolved" "https://mirrors.cloud.tencent.com/npm/axios/-/axios-0.21.4.tgz"
+  "version" "0.21.4"
+  dependencies:
+    "follow-redirects" "^1.14.0"
 
 "axios@^1.2.2":
   "integrity" "sha512-bz/J4gS2S3I7mpN/YZfGFTqhXTYzRho8Ay38w2otuuDR322KzFIWm/4W2K6gIwvWaws5n+mnb7D1lN9uD+QH6Q=="
@@ -2054,6 +2106,11 @@
   "resolved" "https://mirrors.cloud.tencent.com/npm/define-lazy-prop/-/define-lazy-prop-2.0.0.tgz"
   "version" "2.0.0"
 
+"defu@^5.0.0":
+  "integrity" "sha512-EPS1carKg+dkEVy3qNTqIdp2qV7mUP08nIsupfwQpz++slCVRw7qbQyWvSTig+kFPwz2XXp5/kIIkH+CwrJKkQ=="
+  "resolved" "https://mirrors.cloud.tencent.com/npm/defu/-/defu-5.0.1.tgz"
+  "version" "5.0.1"
+
 "defu@^6.0.0", "defu@^6.1.1":
   "integrity" "sha512-aA964RUCsBt0FGoNIlA3uFgo2hO+WWC0fiC6DBps/0SFzkKcYoM/3CzVLIa5xSsrFjdioMdYgAIbwo80qp2MoA=="
   "resolved" "https://mirrors.cloud.tencent.com/npm/defu/-/defu-6.1.1.tgz"
@@ -2434,7 +2491,7 @@
   "resolved" "https://mirrors.cloud.tencent.com/npm/flat/-/flat-5.0.2.tgz"
   "version" "5.0.2"
 
-"follow-redirects@^1.0.0", "follow-redirects@^1.15.0":
+"follow-redirects@^1.0.0", "follow-redirects@^1.14.0", "follow-redirects@^1.15.0":
   "integrity" "sha512-VQLG33o04KaQ8uYi2tVNbdrWp1QWxNNea+nmIB4EVM28v0hmP17z7aG1+wAkNzVq4KeXTq3221ye5qTJP91JwA=="
   "resolved" "https://mirrors.cloud.tencent.com/npm/follow-redirects/-/follow-redirects-1.15.2.tgz"
   "version" "1.15.2"
@@ -2570,6 +2627,11 @@
   "version" "13.1.0"
   dependencies:
     "git-up" "^7.0.0"
+
+"github-markdown-css@^5.1.0":
+  "integrity" "sha512-QLtORwHHtUHhPMHu7i4GKfP6Vx5CWZn+NKQXe+cBhslY1HEt0CTEkP4d/vSROKV0iIJSpl4UtlQ16AD8C6lMug=="
+  "resolved" "https://mirrors.cloud.tencent.com/npm/github-markdown-css/-/github-markdown-css-5.1.0.tgz"
+  "version" "5.1.0"
 
 "glob-parent@^5.1.2", "glob-parent@~5.1.2":
   "integrity" "sha512-AOIgSQCepiJYwP3ARnGx+5VnTu2HBYdzbGP45eLw1vr3zB3vZLeyed1sC9hnbcOc9/SrMyM5RPQrkGz4aS9Zow=="
@@ -2708,6 +2770,17 @@
     "setprototypeof" "1.2.0"
     "statuses" "2.0.1"
     "toidentifier" "1.0.1"
+
+"http-proxy-middleware@^1.0.6":
+  "integrity" "sha512-13eVVDYS4z79w7f1+NPllJtOQFx/FdUW4btIvVRMaRlUY9VGstAbo5MOhLEuUgZFRHn3x50ufn25zkj/boZnEg=="
+  "resolved" "https://mirrors.cloud.tencent.com/npm/http-proxy-middleware/-/http-proxy-middleware-1.3.1.tgz"
+  "version" "1.3.1"
+  dependencies:
+    "@types/http-proxy" "^1.17.5"
+    "http-proxy" "^1.18.1"
+    "is-glob" "^4.0.1"
+    "is-plain-obj" "^3.0.0"
+    "micromatch" "^4.0.2"
 
 "http-proxy@^1.18.1":
   "integrity" "sha512-7mz/721AbnJwIVbnaSv1Cz3Am0ZLT/UBwkC92VlxhXv/k/BBQfM2fXElQNC27BVGr0uwUpplYPQM9LnaBMR5NQ=="
@@ -2909,6 +2982,11 @@
   "resolved" "https://mirrors.cloud.tencent.com/npm/is-number/-/is-number-7.0.0.tgz"
   "version" "7.0.0"
 
+"is-plain-obj@^3.0.0":
+  "integrity" "sha512-gwsOE28k+23GP1B6vFl1oVh/WOzmawBrKwo5Ev6wMKzPkaXaCDIQKzLnvsA42DRlbVTWorkgTKIviAKCWkfUwA=="
+  "resolved" "https://mirrors.cloud.tencent.com/npm/is-plain-obj/-/is-plain-obj-3.0.0.tgz"
+  "version" "3.0.0"
+
 "is-primitive@^3.0.1":
   "integrity" "sha512-GljRxhWvlCNRfZyORiH77FwdFwGcMO620o37EOYC0ORWdq+WYNVqW0w2Juzew4M+L81l6/QS3t5gkkihyRqv9w=="
   "resolved" "https://mirrors.cloud.tencent.com/npm/is-primitive/-/is-primitive-3.0.1.tgz"
@@ -2925,6 +3003,11 @@
   "version" "1.2.1"
   dependencies:
     "@types/estree" "*"
+
+"is-retry-allowed@^2.2.0":
+  "integrity" "sha512-XVm7LOeLpTW4jV19QSH38vkswxoLud8sQ57YwJVTPWdiaI9I8keEhGFpBlslyVsgdQy4Opg8QOLb8YRgsyZiQg=="
+  "resolved" "https://mirrors.cloud.tencent.com/npm/is-retry-allowed/-/is-retry-allowed-2.2.0.tgz"
+  "version" "2.2.0"
 
 "is-ssh@^1.4.0":
   "integrity" "sha512-x7+VxdxOdlV3CYpjvRLBv5Lo9OJerlYanjwFrPR9fuGPjCiNiCzFgAWpiLAohSbsnH4ZAys3SBh+hq5rJosxUQ=="
@@ -3211,6 +3294,11 @@
   "version" "3.1.0"
   dependencies:
     "semver" "^6.0.0"
+
+"marked@^4.2.12":
+  "integrity" "sha512-yr8hSKa3Fv4D3jdZmtMMPghgVt6TWbk86WQaWhDloQjRSQhMMYCAro7jP7VDJrjjdV8pxVxMssXS8B8Y5DZ5aw=="
+  "resolved" "https://mirrors.cloud.tencent.com/npm/marked/-/marked-4.2.12.tgz"
+  "version" "4.2.12"
 
 "marky@^1.2.2":
   "integrity" "sha512-q9JtQJKjpsVxCRVgQ+WapguSbKC3SQ5HEzFGPAJMStgh3QjCawp00UKv3MTTAArTmGmmPUvllHZoNbZ3gs0I+Q=="
@@ -4297,6 +4385,11 @@
   "version" "3.0.0"
   dependencies:
     "redis-errors" "^1.0.0"
+
+"regenerator-runtime@^0.13.11":
+  "integrity" "sha512-kY1AZVr2Ra+t+piVaJ4gxaFaReZVH40AKNo7UCX6W+dEwBo/2oZJzqfuN1qLq1oL45o56cPaTXELwrTh8Fpggg=="
+  "resolved" "https://mirrors.cloud.tencent.com/npm/regenerator-runtime/-/regenerator-runtime-0.13.11.tgz"
+  "version" "0.13.11"
 
 "require-directory@^2.1.1":
   "integrity" "sha1-jGStX9MNqxyXbiNE/+f3kqam30I="

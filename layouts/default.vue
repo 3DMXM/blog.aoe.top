@@ -16,6 +16,7 @@ theme.global.name.value = "dark";
             <v-container>
                 <BaseWelcome />
                 <v-row>
+                    <v-col cols="12"> <v-divider></v-divider></v-col>
                     <v-col cols="4">
                         <LayoutsSidebar />
                     </v-col>

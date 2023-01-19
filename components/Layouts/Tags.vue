@@ -1,232 +1,199 @@
 <script lang='ts' setup>
-import {
-    select,
-    forceSimulation,
-    forceLink,
-    forceManyBody,
-    forceCenter,
-    scaleOrdinal,
-    schemeCategory10,
-    drag
-} from "d3";
 
 let chartRef = ref<HTMLElement | null>(null);
 
-let data = {
-    nodes: [
-        { name: 'A人物' },
-        { name: 'B人物' },
-        { name: 'C人物' },
-        { name: 'D人物' },
-        { name: 'E人物' },
-        { name: 'F人物' },
-        { name: 'G人物' },
-        { name: 'H人物' },
-        { name: 'I人物' },
-        { name: 'J人物' },
-        { name: 'K人物' },
-        { name: 'L人物' },
-        { name: 'M人物' }
-    ],
-    edges: [
-        // value越小关系越近
-        { source: 0, target: 1, relation: '朋友', value: 3 },
-        { source: 0, target: 2, relation: '朋友', value: 3 },
-        { source: 0, target: 3, relation: '朋友', value: 6 },
-        { source: 1, target: 2, relation: '朋友', value: 6 },
-        { source: 1, target: 3, relation: '朋友', value: 7 },
-        { source: 2, target: 3, relation: '朋友', value: 7 },
-        { source: 0, target: 4, relation: '朋友', value: 3 },
-        { source: 0, target: 5, relation: '朋友', value: 3 },
-        { source: 4, target: 5, relation: '夫妻', value: 1 },
-        { source: 0, target: 6, relation: '兄弟', value: 2 },
-        { source: 4, target: 6, relation: '同学', value: 3 },
-        { source: 5, target: 6, relation: '同学', value: 3 },
-        { source: 4, target: 7, relation: '同学', value: 4 },
-        { source: 5, target: 7, relation: '同学', value: 3 },
-        { source: 6, target: 7, relation: '同学', value: 3 },
-        { source: 4, target: 8, relation: '师生', value: 4 },
-        { source: 5, target: 8, relation: '师生', value: 5 },
-        { source: 6, target: 8, relation: '师生', value: 3 },
-        { source: 7, target: 8, relation: '师生', value: 5 },
-        { source: 8, target: 9, relation: '师生', value: 4 },
-        { source: 3, target: 9, relation: '师生', value: 5 },
-        { source: 2, target: 10, relation: '母子', value: 1 },
-        { source: 10, target: 11, relation: '雇佣', value: 6 },
-        { source: 10, target: 12, relation: '雇佣', value: 6 },
-        { source: 11, target: 12, relation: '同事', value: 7 }
-    ]
-}
-
-onMounted(() => {
-    const containerWidth = 150;
-    const margin = { top: 60, right: 60, bottom: 60, left: 60 }
-    const width = containerWidth - margin.left - margin.right
-    const height = 700 - margin.top - margin.bottom
-    let chart = select(chartRef.value)
-        .attr('width', width + margin.left + margin.right)
-        .attr('height', height + margin.top + margin.bottom)
-
-    let g = chart
-        .append('g')
-        .attr('transform', 'translate(' + margin.left + ',' + margin.top + ')') // 设最外包层在总图上的相对位置
-    let simulation = forceSimulation() // 构建力导向图
-        .force(
-            'link',
-            forceLink()
-                .id(function (d, i) {
-                    return i
-                })
-                .distance(function (d) {
-                    // return d.value * 50
-                    console.log(d);
-                    return 100
-                })
-        )
-        .force('charge', forceManyBody())
-        .force('center', forceCenter(width / 2, height / 2))
-
-    let z = scaleOrdinal(schemeCategory10) // 通用线条的颜色
-
-    let link = g
-        .append('g') // 画连接线
-        .attr('class', 'links')
-        .selectAll('line')
-        .data(data.edges)
-        .enter()
-        .append('line')
-
-    let linkText = g
-        .append('g') // 画连接连上面的关系文字
-        .attr('class', 'link-text')
-        .selectAll('text')
-        .data(data.edges)
-        .enter()
-        .append('text')
-        .text(function (d) {
-            return d.relation
-        })
-
-    let node = g
-        .append('g') // 画圆圈和文字
-        .attr('class', 'nodes')
-        .selectAll('g')
-        .data(data.nodes)
-        .enter()
-        .append('g')
-        .on('mouseover', function (d, i) {
-            //显示连接线上的文字
-            linkText.style('fill-opacity', function (edge) {
-                if (edge.source === d || edge.target === d) {
-                    return 1
-                }
-                return null
-            })
-            //连接线加粗
-            link
-                .style('stroke-width', function (edge) {
-                    if (edge.source === d || edge.target === d) {
-                        return '2px'
-                    }
-                    return null
-                })
-                .style('stroke', function (edge) {
-                    if (edge.source === d || edge.target === d) {
-                        return '#000'
-                    }
-                    return null
-                })
-        })
-        .on('mouseout', function (d, i) {
-            //隐去连接线上的文字
-            linkText.style('fill-opacity', function (edge) {
-                if (edge.source === d || edge.target === d) {
-                    return 0
-                }
-                return null
-            })
-            //连接线减粗
-            link
-                .style('stroke-width', function (edge) {
-                    if (edge.source === d || edge.target === d) {
-                        return '1px'
-                    }
-                    return null
-                })
-                .style('stroke', function (edge) {
-                    if (edge.source === d || edge.target === d) {
-                        return '#ddd'
-                    }
-                    return null
-                })
-        })
-        .call(
-            drag()
-            // .on('start', dragstarted)
-            // .on('drag', dragged)
-            // .on('end', dragended)
-        )
-
-    node
-        .append('circle')
-        .attr('r', 5)
-        .attr('fill', function (d, i) {
-            return z(i.toString())
-        })
-
-    node
-        .append('text')
-        .attr('fill', function (d, i) {
-            return z(i.toString())
-        })
-        .attr('y', -20)
-        .attr('dy', '.71em')
-        .text(function (d) {
-            return d.name
-        })
-
-    simulation // 初始化力导向图
-        .nodes()
-
-    chart.append('g') // 输出标题
-        .attr('class', 'bar--title')
-        .append('text')
-        .attr('fill', '#000')
-        .attr('font-size', '16px')
-        .attr('font-weight', '700')
-        .attr('text-anchor', 'middle')
-        .attr('color', '#fff')
-        .attr('x', containerWidth / 2)
-        .attr('y', 20)
-        .text('人物关系图')
-
-    function dragstarted(d: any) {
-
-    }
-
-    function dragged(d: any) {
-
-    }
-
-    function dragended(d: any) {
-
-        d.fx = null
-        d.fy = null
-    }
-
-})
-
-
-
-
+let tagList = [
+    "cookie",
+    "css",
+    "display",
+    "DOM",
+    "DOM和CSS操作",
+    "Electron",
+    "error C2001",
+    "express",
+    "Flashback",
+    "Git",
+    "GitLab",
+    "GOG",
+    "Google云",
+    "GTA5",
+    "GUILayout",
+    "HTML",
+    "ipcMain",
+    "ipcRenderer",
+    "JC",
+    "JOJO",
+    "jq",
+    "jQuery",
+    "jQuery库",
+    "JS",
+    "JSON",
+    "key",
+    "Less",
+    "Linux",
+    "Markdown",
+    "marked.js",
+    "Math",
+    "mod",
+    "Mod制作",
+    "Mod开发",
+    "Mod教程",
+    "node",
+    "NodeJs",
+    "nodemon",
+    "NovelAI",
+    "Nuxt3",
+    "outline",
+    "PHP",
+    "PhpStorm",
+    "PyQt5",
+    "Python",
+    "QT",
+    "REDUX",
+    "rem",
+    "Script Hook RDR2",
+    "ScriptHook RDR2.NET",
+    "ssr",
+    "Steam",
+    "tag",
+    "Ubuntu",
+    "UGUI",
+    "UI",
+    "unity",
+    "v2aey",
+    "v2r",
+    "Vue3",
+    "Vuetify3",
+    "web",
+    "webp",
+    "Windows10",
+    "下载",
+    "下载速度",
+    "东方少年",
+    "中文编码问题",
+    "中英对照",
+    "中英对照表",
+    "事件",
+    "亮点",
+    "代码风格",
+    "伪类选择器",
+    "作弊码",
+    "使用模板",
+    "依赖注入",
+    "依赖管理",
+    "入门指南",
+    "关键词",
+    "关闭",
+    "内置修改器",
+    "准备工作",
+    "函数",
+    "分片",
+    "分类表",
+    "分页",
+    "前后端通讯",
+    "前缀",
+    "加载进度条",
+    "动画",
+    "博客",
+    "压缩包",
+    "参数",
+    "反爬虫",
+    "变量",
+    "合并",
+    "响应方法",
+    "喜加一",
+    "图文教程",
+    "图片",
+    "图片密码",
+    "基础",
+    "多联",
+    "字体",
+    "字符串对象",
+    "安全",
+    "安装",
+    "安装教程",
+    "定位",
+    "对象",
+    "小莫网盘",
+    "少女前线",
+    "布局",
+    "开发实践",
+    "开坑",
+    "开放",
+    "开放端口",
+    "开机密码",
+    "开源",
+    "异常",
+    "弹性布局",
+    "微软云",
+    "总结",
+    "战争之人",
+    "战甲名称",
+    "扩容",
+    "批量",
+    "批量上传",
+    "控制台",
+    "控制语句",
+    "提速",
+    "插件",
+    "搭建服务器",
+    "操作",
+    "教程",
+    "数据库",
+    "数据类型",
+    "数组",
+    "文件",
+    "文件夹",
+    "文字",
+    "文本属性",
+    "文档撰写",
+    "新浪图库",
+    "方舟：生存进化",
+    "日期",
+    "日漫",
+    "时间",
+    "星际战甲",
+    "服务器",
+    "查询",
+    "标签",
+    "样式",
+    "桑塔与海盗的诅咒",
+    "梯子",
+    "概述",
+    "模型",
+    "模型导入",
+    "正则表达式",
+    "汇总",
+    "汉化",
+    "汉化版",
+    "测试",
+    "浏览器对象",
+    "渐变",
+    "游戏",
+    "激活码",
+    "热加载",
+    "爬虫",
+    "物品列表",
+    "猫甲",
+    "画廊",
+    "画质补丁",
+    "番剧",
+    "白嫖资讯",
+    "盒模型",
+    "目录",
+    "石之海",
+    "硬盘",
+    "社区",
+    "秘籍",
+]
 
 </script>
 <template>
     <div class="tags module">
         <h3 class="title">分类</h3>
         <div class="force">
-            <svg ref="chartRef">
-            </svg>
+            <v-chip v-for="(item, index) in tagList" :key="index" class="ma-2" label prepend-icon="mdi-label"
+                :to="`/sort/${item}`" target="_blank">{{ item }}</v-chip>
         </div>
     </div>
 </template>
@@ -237,5 +204,8 @@ export default {
 }
 </script>
 <style lang='less' scoped>
-
+.force {
+    max-height: 350px;
+    overflow: auto;
+}
 </style>
