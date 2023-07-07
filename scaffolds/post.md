@@ -1,7 +1,7 @@
 ---
 title: {{ title }}
 date: {{ date }}
-categories: Notes
+categories: notes
 tags:
 - Tag0
 - Tag1

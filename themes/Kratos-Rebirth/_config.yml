@@ -13,7 +13,7 @@ site_analytics:
   </script>'
 
 hoster: <a href="https://vercel.com/" target="_blank">Vercel</a>
-site_logo: ""
+site_logo: "https://mod.3dmgame.com/static/upload/mod/202307/MOD64a7767d0409f.png@webp"
 snow: true
 click_animate_js: false
 enable_dark: true
