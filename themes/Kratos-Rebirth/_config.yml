@@ -1,5 +1,17 @@
 # Global 全局配置
-site_analytics: '<script>var _hmt = _hmt || [];(function() {  var hm = document.createElement("script");  hm.src = "https://hm.baidu.com/hm.js?0fba1f3013c5565107a4b39759647150";  var s = document.getElementsByTagName("script")[0];   s.parentNode.insertBefore(hm, s);})();</script>'
+site_analytics:
+  '<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5978423097771370"
+  crossorigin="anonymous"></script>
+  <script>
+  var _hmt = _hmt || [];
+  (function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?0fba1f3013c5565107a4b39759647150";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+  })();
+  </script>'
+
 hoster: <a href="https://vercel.com/" target="_blank">Vercel</a>
 site_logo: ""
 snow: true
