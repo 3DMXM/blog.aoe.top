@@ -1,7 +1,7 @@
 ---
 title: {{ title }}
 date: {{ date }}
-categories: NodeJS
+categories: Notes
 tags:
 - Tag0
 - Tag1
