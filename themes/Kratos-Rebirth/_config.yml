@@ -1,0 +1,292 @@
+# Global 全局配置
+site_analytics: '<script>var _hmt = _hmt || [];(function() {  var hm = document.createElement("script");  hm.src = "https://hm.baidu.com/hm.js?0fba1f3013c5565107a4b39759647150";  var s = document.getElementsByTagName("script")[0];   s.parentNode.insertBefore(hm, s);})();</script>'
+hoster: <a href="https://vercel.com/" target="_blank">Vercel</a>
+site_logo: ""
+snow: true
+click_animate_js: false
+enable_dark: true
+highlight_theme: night-eighties # 代码高亮主题（light | night | night-eighties | night-blue | night-bright）
+check_update: true
+# canonical: true
+cdn: false
+
+vendors:
+  packages:
+    disqusjs:
+      version: 1.2.6
+    gitalk:
+      version: 1.7.2
+    gitment:
+      version: 0.0.3
+    twikoo:
+      version: 1.5.11
+    valine:
+      version: 1.4.18
+    "@waline/client":
+      version: 2.14.1
+    bootstrap:
+      version: 3.3.4
+    nprogress:
+      version: 0.2.0
+    aplayer:
+      version: 1.10.1
+    "@fancyapps/fancybox":
+      version: 3.5.7
+    layui-src:
+      version: 2.5.5
+    font-awesome:
+      version: 4.7.0
+    jquery:
+      version: 3.6.0
+    qrcode_js:
+      version: 1.0.0
+    mermaid:
+      version: 9.1.1
+    meting:
+      version: 2.0.1
+
+# 自定义样式
+customStyles:
+  images: # 图片相关设置
+  banner: https://mod.3dmgame.com/api/RandomBackgroundImg.jpg # 站点横幅
+  # background: /images/bg.webp # 站点背景
+
+# Index 首页配置
+index:
+  post_type: false
+  read_count: true
+  comment_count: true
+
+# Top Menu 顶部导航栏配置 （具体格式请参照文档）
+topMenu:
+  - label: 首页
+    icon: home
+    url: /
+
+  - label: 工具箱
+    icon: cogs
+    submenu:
+      - label: 小莫的网盘
+        url: https://pan.aoe.top
+      - label: 小莫的游戏库
+        url: https://game.aoe.top
+      - label: 小莫的共享库
+        url: https://cloud.aoe.top/
+  - label: 编程
+    submenu:
+      - label: C#
+        url: /cprogram
+      - label: C++
+        url: /c
+      - label: Hook
+        url: /hook
+  - label: web
+    submenu:
+      - label: TypeScript
+        url: /ts
+      - label: Nodejs
+        url: /nodejs
+      - label: PHP
+        url: /php
+  - label: 笔记
+    url: /url
+  - label: Mod
+    url: /mod
+  - label: Mod站
+    url: https://mod.3dmgame.com/
+  - label: 买下我
+    url: https://wanwang.aliyun.com/nametrade/detail/online.html?domainName=aoe.top
+menu:
+  # index: /
+  # archives: /archives/
+  # friends: /friends/
+  # sites:
+  #   submenu: true
+  #   author: https://candinya.com
+  #   project: https://github.com/Candinya/Kratos-Rebirth
+
+label:
+  # index: <i class="fa fa-home"></i>首页
+  # archives: <i class="fa fa-file"></i>档案馆
+  # friends: <i class="fa fa-paw"></i>好伙伴
+  # sites:
+  #   submenu: <i class="fa fa-link"></i>链接
+  #   author: 作者博客
+  #   project: 项目链接
+
+# Footer 页脚配置
+group_link: false
+contact: # 出于兼容性考虑，继续保留
+  weibo:
+  mail:
+  telegram:
+  twitter:
+  facebook:
+  linkedin:
+  fediverse:
+    instance:
+    username:
+  github:
+  rss:
+footerLinks: [] # 可以自定义
+timenotice: 本站已运行
+icp: 湘ICP备2021011453号-1
+psr:
+
+# Post Page 文章页配置
+posts:
+  show_cc: true
+  donate: true
+  share: true
+  comments:
+    provider: valine
+
+  wordCount:
+    enable: false
+    threshold: 1500
+
+# Disqus [Disqus](https://disqus.com) 评论相关
+disqus:
+  shortname:
+
+# DisqusJS [DisqusJS](https://disqusjs.skk.moe/) 评论相关
+disqusjs:
+  shortname:
+  sitename:
+  api:
+  apikey:
+  admin:
+  adminlabel:
+
+# Valine [Valine](https://valine.js.org) 评论相关
+valine:
+  app_id: 1Htz171Xy5RMxCvvDuXmMc4y-gzGzoHsz
+  app_key: 7uDokHM89dJ8rnWePINvPvNI
+  visitor: true
+  enableQQ: true
+
+# Twikoo [Twikoo](https://twikoo.js.org) 评论相关
+twikoo:
+  env_id:
+
+# Waline [Waline](https://waline.js.org) 评论相关
+## 不仅限于以下内容，您可以参照 Waline的 [前端配置文档](https://waline.js.org/reference/client.html) 设置您需要的配置项
+## el 和 path 会在页面自动生成，不必加入
+waline:
+  serverURL: #后端服务器地址，必填
+  comment: true
+  pageview: true
+
+# Gitalk [Gitalk](https://gitalk.github.io/) 评论相关
+## 不仅限于以下内容，您可以参照 [Gitalk 文档](https://github.com/gitalk/gitalk/blob/master/readme-cn.md#%E8%AE%BE%E7%BD%AE) 设置您需要的配置项
+## id 会在页面自动生成，不必加入
+gitalk:
+  clientID: "GitHub Application Client ID"
+  clientSecret: "GitHub Application Client Secret"
+  repo: "Kratos-Rebirth-Demo"
+  owner: "Candinya"
+  admin:
+    - "Candinya"
+  distractionFreeMode: false
+
+# Gitment [Gitment](https://github.com/imsun/gitment/) 评论相关
+## 不仅限于以下内容，您可以参照 [Gitment 文档](https://github.com/imsun/gitment#methods) 设置您需要的配置项
+## id 会在页面自动生成，不必加入
+gitment:
+  owner: "Candinya"
+  repo: "Kratos-Rebirth-Demo"
+  oauth:
+    client_id: "Your client ID"
+    client_secret: "Your client secret"
+
+# LiveRe [LiveRe](https://livere.com/) 评论相关
+livere:
+  id: city
+  uid:
+
+# APlayer 左下角音乐播放器
+aplayer:
+  enabled: false
+  playlist:
+  meting:
+    server: netease
+    type: playlist
+    id: 3204190542
+  order: random
+
+# Widgets 侧边栏小挂件
+sidebar: left
+widgets:
+  - about
+  - splitter
+  - toc
+  - category
+  - tagcloud
+  - posts
+avatarUri: https://mod.3dmgame.com/static/upload/mod/202307/MOD64a7767d0409f.png@webp
+mobile_toc:
+  hide: false
+  hide_id: false
+
+# Fancybox 文章内图片单击放大
+fancybox: true
+
+# Search 搜索
+search:
+  enable: true
+  path: search.json
+  field: post # page | post | all. Default post
+  content: true # Include post | page content
+
+# JavaScript 相关配置
+## 由于Javascript被压缩后难以有效编辑与生成，因而为了简化操作，将相关的配置项在生成文件时以独立的json文件写出，调用时使用fetch API获取。
+jsconfig:
+  main:
+    cover:
+      randomAmount: 20 # 表示从1~20
+      baseUrl: null # 使用默认值（不单独配置），将跟随 vendors 中的相关设定选择是否使用 cdn
+      filenameTemplate: "thumb_{no}.webp"
+    createTime: "2020/04/20 00:00:00"
+    donateBtn: "投喂小莫"
+    scanNotice: "给快要饿死的小莫投喂点零食吧~"
+    qr_alipay: "https://mod.3dmgame.com/static/upload/mod/202302/MOD63eb01f0e2912.png@webp"
+    qr_wechat: "https://mod.3dmgame.com/static/upload/mod/202302/MOD63eb01f0e3e14.png@webp"
+    siteLeaveEvent: false
+    leaveTitle: "{{{(>_<)}}}哦哟，崩溃啦~"
+    returnTitle: "(*´∇｀*)欸，又好啦~"
+    copyrightNotice: "该内容采用 CC BY-NC-SA 4.0 许可协议，著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"
+    expire_day: 30000
+    topNavScrollToggle: true
+
+# Site verify 站点验证相关配置内容
+site_verify:
+  google:
+  baidu:
+  bing:
+
+# Friends 友链相关内容
+friends:
+  href: "friends"
+  page:
+    title: "好伙伴们"
+    comments: false
+    description: "好伙伴们在哪里~"
+    updated: "2021-01-18"
+  list:
+  # - name: "猫猫①号"
+  #   bio: "喵~"
+  #   avatar: "../images/avatar.webp"
+  #   link: "https://candinya.com"
+  # - name: "猫猫②号"
+  #   bio: "喵喵~"
+  #   avatar: "../images/avatar.webp"
+  #   link: "https://candinya.com"
+  # - name: "猫猫⑨号"
+  #   bio: "咪啪~"
+  #   avatar: "../images/avatar.webp"
+  #   link: "https://candinya.com"
+  verify: true # 验证每个友链的可访问性，炸了会有提示
+
+# Misc 杂项
+misc:
+  showWordCountEstimateWavy: true # 在文章字数处显示表示大约字数的波浪号
