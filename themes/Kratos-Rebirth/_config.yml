@@ -86,24 +86,24 @@ topMenu:
         url: https://cloud.aoe.top/
   - label: 编程
     submenu:
-      - label: C#
-        url: /cprogram
       - label: C++
-        url: /c
-      - label: Hook
-        url: /hook
+        url: /categories/c/
+      - label: python
+        url: /categories/Python/
   - label: web
     submenu:
-      - label: TypeScript
-        url: /ts
-      - label: Nodejs
-        url: /nodejs
-      - label: PHP
-        url: /php
+      - label: NodeJS
+        url: /categories/NodeJS/
+      - label: Electron
+        url: /categories/NodeJS/Electron/
+      - label: Nuxt3
+        url: /categories/NodeJS/Nuxt3/
   - label: 笔记
-    url: /url
+    url: /categories/notes/
   - label: Mod
-    url: /mod
+    url: /categories/Mod/
+  - label: 投喂小莫
+    url: https://aoe.top/donate
   - label: Mod站
     url: https://mod.3dmgame.com/
   - label: 买下我
