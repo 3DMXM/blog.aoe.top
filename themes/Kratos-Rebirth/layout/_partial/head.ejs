@@ -1,7 +1,8 @@
 <head>
   <!-- 元数据 -->
   <meta charset="utf-8">
-  <% if (theme.site_logo) { %><link rel="icon" href="<%- theme.site_logo %>"><% } %>
+  <% if (theme.site_logo) { %>
+  <link rel="icon" href="<%- theme.site_logo %>"><% } %>
   <%
   var title = page.title || __(page.title_i18n);
   if (is_archive()){
@@ -29,9 +30,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   <meta name="format-detection" content="telphone=no, email=no" />
   <% if (is_post()) { %>
-    <meta name="keywords" content="<%- strip_html(list_tags(page.tags, { show_count: false, style: 'none' })) %>" />
+  <meta name="keywords" content="<%- strip_html(list_tags(page.tags, { show_count: false, style: 'none' })) %>" />
   <% } else { %>
-    <meta name="keywords" content="<%- config.keywords %>" />
+  <meta name="keywords" content="<%- config.keywords %>" />
   <% } %>
   <%- open_graph({
     image: (function(){
@@ -41,57 +42,67 @@
     // twitter_site: theme.contact.twitter ? "@" + theme.contact.twitter : null,
     title
   }) %>
-  <% if (config.feed?.path) {%><link rel="alternate" href="<%- config.feed.path %>" type="application/atom+xml"><% } %>
+  <% if (config.feed?.path) {%>
+  <link rel="alternate" href="<%- config.feed.path %>" type="application/atom+xml"><% } %>
   <!-- 站点验证相关 -->
   <% if (theme.site_verify) { %>
-    <% if (theme.site_verify.google) { %>
-      <meta name="google-site-verification" content="<%- theme.site_verify.google %>" />
-    <% } %>
-    <% if (theme.site_verify.baidu) { %>
-      <meta name="baidu-site-verification" content="<%- theme.site_verify.baidu %>" />
-    <% } %>
-    <% if (theme.site_verify.bing) { %>
-      <meta name="msvalidate.01" content="<%- theme.site_verify.bing %>" />
-    <% } %>
+  <% if (theme.site_verify.google) { %>
+  <meta name="google-site-verification" content="<%- theme.site_verify.google %>" />
+  <% } %>
+  <% if (theme.site_verify.baidu) { %>
+  <meta name="baidu-site-verification" content="<%- theme.site_verify.baidu %>" />
+  <% } %>
+  <% if (theme.site_verify.bing) { %>
+  <meta name="msvalidate.01" content="<%- theme.site_verify.bing %>" />
+  <% } %>
   <% } %>
   <!-- 样式表文件 -->
   <%- css_theme_cdn('css/kratosr.min.css', {id: "kratos-css", media:"all"}) %>
   <% if (theme.enable_dark) { %>
-    <%- css_theme_cdn('css/kr-color-dark.min.css', {id: "darkmode-css", media:"(prefers-color-scheme: dark)"}) %>
-    <%- js_theme_cdn('js/kr-dark.min.js') %>
+  <%- css_theme_cdn('css/kr-color-dark.min.css', {id: "darkmode-css", media:"(prefers-color-scheme: dark)"}) %>
+  <%- js_theme_cdn('js/kr-dark.min.js') %>
   <% } %>
   <% if (config.highlight && config.highlight.enable && theme.highlight_theme) { %>
-    <%- css_theme_cdn(`css/highlight/${theme.highlight_theme || 'night-eighties'}.min.css`, {id: "highlight-css", media:"all"}) %>
+  <%- css_theme_cdn(`css/highlight/${theme.highlight_theme || 'night-eighties'}.min.css`, {id: "highlight-css", media:"all"}) %>
   <% } %>
   <%- css_npm_cdn('font-awesome', 'css/font-awesome.min.css', {id:"fontawe-css", media:"all"}) %>
   <%- css_npm_cdn('nprogress', 'nprogress.css', {id:"nprogress-css", media:"all"}) %>
   <% const commentProvider = theme.posts.comments?.provider ?? theme.posts.comments; %>
   <% if (theme.aplayer.enabled) { %>
-    <%- css_npm_cdn('aplayer', 'dist/APlayer.min.css') %>
+  <%- css_npm_cdn('aplayer', 'dist/APlayer.min.css') %>
   <% }%>
   <% if (theme.fancybox){ %>
-    <%- css_npm_cdn('@fancyapps/fancybox', 'dist/jquery.fancybox.min.css') %>
+  <%- css_npm_cdn('@fancyapps/fancybox', 'dist/jquery.fancybox.min.css') %>
   <% } %>
   <!-- 不得不预先加载的一些JS文件 -->
   <%- js_npm_cdn('jquery', 'dist/jquery.min.js') %>
   <% if (theme.posts.share) { %>
-    <%- js_npm_cdn('qrcode_js', 'qrcode.min.js') %>
+  <%- js_npm_cdn('qrcode_js', 'qrcode.min.js') %>
   <% } %>
   <% if (theme.customStyles) { %>
   <style>
-    <% if (theme.customStyles.images?.banner) { %>
-      .kratos-cover.kratos-cover-2 {
+    <% if (theme.customStyles.images?.banner) {
+      %>.kratos-cover.kratos-cover-2 {
         background-image: url('<%- theme.customStyles.images?.banner %>');
       }
-    <% } %>
-    <% if (theme.customStyles.images?.background) { %>
-      @media(min-width:768px) {
+
+      <%
+    }
+
+    %><% if (theme.customStyles.images?.background) {
+      %>@media(min-width:768px) {
         body.custom-background {
           background-image: url('<%- theme.customStyles.images?.background %>');
         }
       }
-    <% } %>
+
+      <%
+    }
+
+    %>
   </style>
   <% } %>
+  <% if (is_post() && config.generator_amp){ %>
+  <link rel="amphtml" href="<%= config.url %><%= config.root %><%= page.path %>/amp/index.html">
+  <% } %>
 </head>
-

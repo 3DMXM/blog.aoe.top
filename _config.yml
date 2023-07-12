@@ -14,7 +14,7 @@ timezone: "Asia/Shanghai"
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
 url: https://blog.aoe.top
-permalink: /:category/:title/
+permalink: :category/:title/
 permalink_defaults:
 pretty_urls:
   trailing_index: true # Set to false to remove trailing 'index.html' from permalinks
@@ -121,3 +121,17 @@ sitemap:
 robotstxt:
   useragent: "*"
   sitemap: /sitemap.xml
+
+# amp
+generator_amp:
+  templateDir: amp-template
+  assetDistDir: amp-dist
+  logo:
+    path: sample/sample-logo.png
+    width: 600
+    height: 60
+  substituteTitleImage:
+    path: sample/sample-substituteTitleImage.png
+    width: 1024
+    height: 800
+  warningLog: false # To display warning, please set true.
