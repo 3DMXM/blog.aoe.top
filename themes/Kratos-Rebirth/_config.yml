@@ -84,6 +84,8 @@ topMenu:
         url: https://game.aoe.top
       - label: 小莫的共享库
         url: https://cloud.aoe.top/
+      - label: 小莫的维基库
+        url: https://wiki.aoe.top/
   - label: 编程
     submenu:
       - label: C++
