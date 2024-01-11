@@ -120,7 +120,7 @@ sitemap:
 # robots.txt
 robotstxt:
   useragent: "*"
-  sitemap: /sitemap.xml
+  sitemap: https://blog.aoe.top/sitemap.xml
 
 # amp
 generator_amp:
