@@ -3490,4 +3490,9 @@ span.mjx-chtml.MJXc-display {
     background: url(../images/comment.webp) 100% 100% no-repeat !important
 }
 
+
+.kratos-post-content div>p {
+    display: -webkit-box !important;
+}
+
 /*# sourceMappingURL=../maps/kratosr.min.css.map */

@@ -104,6 +104,8 @@ topMenu:
     url: /categories/notes/
   - label: Mod
     url: /categories/Mod/
+  - label: 番剧
+    url: /animation/
   - label: 投喂小莫
     url: https://aoe.top/donate
   - label: Mod站
@@ -283,27 +285,27 @@ site_verify:
   bing:
 
 # Friends 友链相关内容
-friends:
-  href: "friends"
-  page:
-    title: "好伙伴们"
-    comments: false
-    description: "好伙伴们在哪里~"
-    updated: "2021-01-18"
-  list:
-    - name: "猫猫①号"
-      bio: "喵~"
-      avatar: "../images/avatar.webp"
-      link: "https://candinya.com"
-    - name: "猫猫②号"
-      bio: "喵喵~"
-      avatar: "../images/avatar.webp"
-      link: "https://candinya.com"
-    - name: "猫猫⑨号"
-      bio: "咪啪~"
-      avatar: "../images/avatar.webp"
-      link: "https://candinya.com"
-  verify: true # 验证每个友链的可访问性，炸了会有提示
+# friends:
+#   href: "friends"
+#   page:
+#     title: "好伙伴们"
+#     comments: false
+#     description: "好伙伴们在哪里~"
+#     updated: "2021-01-18"
+#   list:
+#     - name: "猫猫①号"
+#       bio: "喵~"
+#       avatar: "../images/avatar.webp"
+#       link: "https://candinya.com"
+#     - name: "猫猫②号"
+#       bio: "喵喵~"
+#       avatar: "../images/avatar.webp"
+#       link: "https://candinya.com"
+#     - name: "猫猫⑨号"
+#       bio: "咪啪~"
+#       avatar: "../images/avatar.webp"
+#       link: "https://candinya.com"
+#   verify: true # 验证每个友链的可访问性，炸了会有提示
 
 # Misc 杂项
 misc:

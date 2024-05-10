@@ -5,18 +5,22 @@
 }
 
 @keyframes top-pulse {
-	0% {
-		box-shadow: 0 0 0 0 rgba(59, 152, 255, 0.3)
-	}
-	75% {
-		box-shadow: 0 0 0 10px rgba(4, 169, 245, 0)
-	}
-	100% {
-		box-shadow: 0 0 0 0 rgba(4, 169, 245, 0)
-	}
+  0% {
+    box-shadow: 0 0 0 0 rgba(59, 152, 255, 0.3)
+  }
+
+  75% {
+    box-shadow: 0 0 0 10px rgba(4, 169, 245, 0)
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 rgba(4, 169, 245, 0)
+  }
 }
 
-*, :after, :before {
+*,
+:after,
+:before {
   box-sizing: border-box;
 }
 
@@ -73,7 +77,8 @@ a {
   }
 }
 
-abbr[data-original-title], abbr[title] {
+abbr[data-original-title],
+abbr[title] {
   cursor: help;
   border-bottom: 1px dotted #777;
 }
@@ -174,7 +179,8 @@ blockquote {
     content: '\2014 \00A0';
   }
 
-  .small, small {
+  .small,
+  small {
     display: block;
     font-size: 80%;
     line-height: 1.42857143;
@@ -254,15 +260,21 @@ a {
   transition: .5s;
 }
 
-h1, h2, h3,
-h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-weight: 400;
   margin: 0 0 15px 0;
   font-family: inherit;
   line-height: 1.1;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   margin-top: 20px;
   margin-bottom: 10px;
 
@@ -271,7 +283,9 @@ h1, h2, h3 {
   }
 }
 
-h4, h5, h6 {
+h4,
+h5,
+h6 {
   margin-top: 25px;
   margin-bottom: 10px;
 
@@ -284,9 +298,10 @@ h {
   &1 {
     font-size: 1.5em;
   }
+
   &2 {
     font-size: 1.3em;
-  
+
     &.title-h2 {
       margin: 15px -20px;
       padding: 0 20px;
@@ -296,15 +311,19 @@ h {
       font-size: 18pt;
     }
   }
+
   &3 {
     font-size: 1.17em;
   }
+
   &4 {
     font-size: 1em;
   }
+
   &5 {
     font-size: .83em;
   }
+
   &6 {
     font-size: .67em;
   }
@@ -321,7 +340,8 @@ img {
   vertical-align: middle;
 }
 
-code, kbd {
+code,
+kbd {
   font-size: 90%;
   color: #fff;
   border-radius: 3px;
@@ -333,7 +353,7 @@ code, kbd {
 // prismjs 或 无高亮模式 或 highlightjs的nowarp模式
 pre:has(code) {
   border-radius: 8px;
-  padding-top: 30px!important;
+  padding-top: 30px !important;
   position: relative;
   overflow: auto;
   background-color: #1d1f21;
@@ -341,17 +361,17 @@ pre:has(code) {
   font-weight: unset;
 
   &::before {
-      content: " ";
-      position: absolute;
-      -webkit-border-radius: 50%;
-      border-radius: 50%;
-      background-color: #fc625d;
-      width: 12px;
-      height: 12px;
-      left: 10px;
-      top: 10px;
-      -webkit-box-shadow: 20px 0 #fdbc40, 40px 0 #35cd4b;
-      box-shadow: 20px 0 #fdbc40, 40px 0 #35cd4b;
+    content: " ";
+    position: absolute;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    background-color: #fc625d;
+    width: 12px;
+    height: 12px;
+    left: 10px;
+    top: 10px;
+    -webkit-box-shadow: 20px 0 #fdbc40, 40px 0 #35cd4b;
+    box-shadow: 20px 0 #fdbc40, 40px 0 #35cd4b;
   }
 }
 
@@ -386,14 +406,18 @@ mark {
   // color: #000;
 }
 
-p, ol, ul {
+p,
+ol,
+ul {
   margin: 0 0 1em 0;
   font-size: 16px;
 }
 
-ol, ul {
+ol,
+ul {
 
-  ol, ul {
+  ol,
+  ul {
     margin-bottom: 0;
   }
 }
@@ -410,7 +434,9 @@ ruby {
 }
 
 select {
-  [multiple], [size] {
+
+  [multiple],
+  [size] {
     height: auto
   }
 }
@@ -427,7 +453,8 @@ small {
   font-size: 85%
 }
 
-sub, sup {
+sub,
+sup {
   position: relative;
   font-size: 75%;
   line-height: 0;
@@ -461,7 +488,8 @@ table {
     display: table-column;
   }
 
-  td, th {
+  td,
+  th {
     padding: 6px 12px;
     border: 1px solid #ccc;
     font-size: 14px;
@@ -493,7 +521,9 @@ table {
   -webkit-transition: .3s;
   transition: .3s;
 
-  &:active, &:focus, &:hover {
+  &:active,
+  &:focus,
+  &:hover {
     background: #393e46 !important;
     color: #fff;
     outline: 0 !important;
@@ -511,18 +541,25 @@ table {
       background-color: #15b9fa;
     }
 
-    &:active, &:focus {
+    &:active,
+    &:focus {
       border-color: #0895cb;
       background-color: #0895cb;
     }
   }
 }
 
-.clearfix, .container, .nav, .row {
-  &::before, &::after {
+.clearfix,
+.container,
+.nav,
+.row {
+
+  &::before,
+  &::after {
     display: table;
     content: " ";
   }
+
   &::after {
     clear: both;
   }
@@ -590,11 +627,16 @@ table {
   width: 55%
 }
 
-.pull, .pullquote {
-  &-left, .left {
+.pull,
+.pullquote {
+
+  &-left,
+  .left {
     float: left !important;
   }
-  &-right, .right {
+
+  &-right,
+  .right {
     float: right !important;
   }
 }
@@ -617,24 +659,31 @@ table {
   &left {
     text-align: left;
   }
+
   &right {
     text-align: right;
   }
+
   &center {
     text-align: center;
   }
+
   &justify {
     text-align: justify;
   }
+
   &nowrap {
     white-space: nowrap;
   }
+
   &lowercase {
     text-transform: lowercase;
   }
+
   &uppercase {
     text-transform: uppercase;
   }
+
   &capitalize {
     text-transform: capitalize;
   }
@@ -647,7 +696,8 @@ table {
   display: flex;
   flex-direction: row;
 
-  .icon, .text {
+  .icon,
+  .text {
     display: flex;
   }
 
@@ -672,30 +722,34 @@ table {
     color: #1e8cdb;
   }
 
-  ul, p {
-    margin: 0 1em!important;
+  ul,
+  p {
+    margin: 0 1em !important;
   }
+
   p {
     &+p {
-      margin-top: .5em!important;
+      margin-top: .5em !important;
     }
   }
 
   &-primary {
     background-color: #cfe2ff;
     border-color: #b6d4fe;
-    
-    .icon, .text p {
-      color: #084298!important;
+
+    .icon,
+    .text p {
+      color: #084298 !important;
     }
   }
 
   &-success {
     background-color: #d1e7dd;
     border-color: #badbcc;
-    
-    .icon, .text p {
-      color: #0f5132!important;
+
+    .icon,
+    .text p {
+      color: #0f5132 !important;
     }
   }
 
@@ -703,8 +757,9 @@ table {
     background-color: #f8d7da;
     border-color: #f5c2c7;
 
-    .icon, .text p {
-      color: #842029!important;
+    .icon,
+    .text p {
+      color: #842029 !important;
     }
   }
 
@@ -712,17 +767,19 @@ table {
     background-color: #cff4fc;
     border-color: #b6effb;
 
-    .icon, .text p {
-      color: #055160!important;
+    .icon,
+    .text p {
+      color: #055160 !important;
     }
   }
 
   &-warning {
     background-color: #fff3cd;
     border-color: #ffecb5;
-    
-    .icon, .text p {
-      color: #664d03!important;
+
+    .icon,
+    .text p {
+      color: #664d03 !important;
     }
   }
 }
@@ -736,46 +793,51 @@ table {
   &-body {
     padding: 15px;
   }
+
   &-title {
     padding-left: 15px;
   }
+
   &-heading {
     padding: 10px 15px;
     border-bottom: 1px solid transparent;
   }
 
-  > .panel-title {
+  >.panel-title {
     color: #fff;
   }
 
   &-danger {
     border-color: #e15554;
 
-    > .panel-title {
+    >.panel-title {
       border-color: #e15554;
       background-color: #e15554;
     }
   }
+
   &-success {
     border-color: #3bb273;
 
-    > .panel-title {
+    >.panel-title {
       border-color: #3bb273;
       background-color: #3bb273;
     }
   }
+
   &-info {
     border-color: #4d9de0;
 
-    > .panel-title {
+    >.panel-title {
       border-color: #4d9de0;
       background-color: #4d9de0;
     }
   }
+
   &-warning {
     border-color: #ffc320;
 
-    > .panel-title {
+    >.panel-title {
       border-color: #ffc320;
       background-color: #ffc320;
     }
@@ -798,7 +860,8 @@ table {
     margin-top: 15px;
   }
 
-  embed, iframe {
+  embed,
+  iframe {
     position: absolute;
     top: 0;
     left: 0;
@@ -817,7 +880,7 @@ table {
   background: #f6f6f6;
   border-radius: 5px;
 
-  > .xHeading {
+  >.xHeading {
     position: relative;
     cursor: pointer;
     padding-left: 15px;
@@ -915,7 +978,7 @@ table {
   .ul-me {
     padding-bottom: 60px;
   }
-  
+
   ul {
     padding: 0;
     margin: 0;
@@ -928,19 +991,19 @@ table {
       padding: 0;
       margin: 0 0 10px 0;
       list-style: none;
-  
+
       a {
         font-size: 16px;
         color: rgba(255, 255, 255, .55);
       }
 
-      > .sub-menu {
+      >.sub-menu {
         margin-top: 9px;
         padding-left: 20px;
       }
 
       .current-menu-item {
-        > a {
+        >a {
           color: #51aded;
         }
       }
@@ -954,20 +1017,20 @@ table {
   z-index: 5;
 
   #kratos-mobile-topnav {
-  
+
     .color-logo img {
       max-width: 200px;
       height: 40px;
       margin-top: -5px
     }
-  
+
     .kratos-nav-toggle {
       position: fixed;
       top: 11px;
       right: 15px;
       z-index: 999;
       height: 38px;
-    
+
       i {
         position: relative;
         display: inline-block;
@@ -981,8 +1044,9 @@ table {
         background: #fff;
         -webkit-transition: .2s;
         transition: .2s;
-    
-        &::before, &::after {
+
+        &::before,
+        &::after {
           content: '';
           width: 28px;
           height: 2.5px;
@@ -992,31 +1056,31 @@ table {
           -webkit-transition: .2s;
           transition: .2s
         }
-    
+
         &::before {
           top: -9px;
         }
-      
+
         &::after {
           bottom: -9px;
         }
       }
     }
-  
+
   }
 
   #kratos-mobile-topnav {
-  
+
     .nav-toggle.toon i {
       background: 0 0;
-    
+
       &::before {
         top: 0;
         height: 2px;
         -webkit-transform: rotateZ(45deg);
         transform: rotateZ(45deg);
       }
-    
+
       &::after {
         bottom: 0;
         height: 2px;
@@ -1030,6 +1094,7 @@ table {
 .sf-menu {
   li {
     position: relative;
+
     i {
       margin-right: .5em;
     }
@@ -1038,6 +1103,7 @@ table {
 
 #kratos-menu-wrap {
   float: left;
+
   .sf-menu {
     a {
       color: #fff;
@@ -1048,7 +1114,8 @@ table {
       display: block;
       position: relative;
     }
-    > li:hover > a {
+
+    >li:hover>a {
       color: #333;
       background: #eee
     }
@@ -1081,10 +1148,10 @@ table {
       position: relative;
     }
 
-    > li {
+    >li {
       float: left;
 
-      > ul.sub-menu {
+      >ul.sub-menu {
         transition: .3s all ease-in-out;
         position: absolute;
         visibility: hidden;
@@ -1097,18 +1164,18 @@ table {
         border-radius: 5px;
         left: -18px;
         box-shadow: 0 5px 15px rgba(0, 0, 0, .15);
-      
+
         a {
           letter-spacing: 0;
           padding: 7px 15px !important;
           line-height: 20px;
           color: #848484;
-      
+
           &:hover {
             color: #51aded;
           }
         }
-      
+
         li a {
           text-align: center
         }
@@ -1125,7 +1192,7 @@ table {
         }
       }
 
-      &:hover > ul.sub-menu {
+      &:hover>ul.sub-menu {
         visibility: visible;
         opacity: 1;
         top: 100%;
@@ -1149,7 +1216,9 @@ body.scroll-down.nav-up #kratos-desktop-topnav {
 }
 
 .kratos {
-  &-cover, &-start {
+
+  &-cover,
+  &-start {
     position: relative;
     height: 800px;
 
@@ -1190,7 +1259,8 @@ body.scroll-down.nav-up #kratos-desktop-topnav {
         display: inline-block;
       }
 
-      p, span {
+      p,
+      span {
         color: #fff;
         margin-bottom: 30px;
         font-size: 25px;
@@ -1200,7 +1270,8 @@ body.scroll-down.nav-up #kratos-desktop-topnav {
         a {
           color: #fff;
 
-          &:focus, &:hover {
+          &:focus,
+          &:hover {
             color: #fff !important;
 
             &.btn {
@@ -1229,17 +1300,20 @@ body.scroll-down.nav-up #kratos-desktop-topnav {
   .alignleft {
     float: left;
   }
+
   .alignright {
     float: right;
   }
+
   .alignnone {
     display: inline;
     vertical-align: text-bottom;
   }
+
   .row {
     display: flex;
 
-    > * {
+    >* {
       max-width: 100%;
     }
 
@@ -1254,7 +1328,8 @@ body.scroll-down.nav-up #kratos-desktop-topnav {
   border-radius: 4px;
   margin: 23px 0 7px;
 
-  a, span {
+  a,
+  span {
     margin: 0 3px;
     position: relative;
     padding: 6px 12px;
@@ -1264,12 +1339,14 @@ body.scroll-down.nav-up #kratos-desktop-topnav {
     color: #626262;
   }
 
-  > span.page-number, > a:hover {
+  >span.page-number,
+  >a:hover {
     background-color: #51aded;
     color: #fff !important;
   }
 
-  .page-number, .extend {
+  .page-number,
+  .extend {
     min-width: 36px;
     height: 36px;
     display: inline-block;
@@ -1294,6 +1371,7 @@ body.scroll-down.nav-up #kratos-desktop-topnav {
     float: left;
     text-align: left;
   }
+
   .nav-next {
     @include nav;
     float: right;
@@ -1304,11 +1382,11 @@ body.scroll-down.nav-up #kratos-desktop-topnav {
 ul.kratos-post-meta {
   padding: 0;
 
-  > li {
+  >li {
     list-style: none;
     display: inline-block;
     font-size: 13px;
-  
+
     &:not(:first-child) {
       margin-left: 12px;
     }
@@ -1321,7 +1399,9 @@ ul.kratos-post-meta {
 
 .kratos-breadcrumb {
   margin: 10px 25px;
-  > a, span {
+
+  >a,
+  span {
     padding: 0 5px;
   }
 }
@@ -1335,7 +1415,7 @@ ul.kratos-post-meta {
     margin: 0 15px 0 38px;
   }
 
-  > i:first-child {
+  >i:first-child {
     position: absolute;
     top: calc(50% - .5em);
     left: -8px;
@@ -1352,6 +1432,7 @@ ul.kratos-post-meta {
       p {
         margin: 0;
       }
+
       img {
         max-width: 100%
       }
@@ -1376,16 +1457,16 @@ ul.kratos-post-meta {
   &:last-of-type {
     margin: 0;
   }
+
   &.kratos-hentry:hover {
     box-shadow: 0 8px 15px rgba(146, 146, 146, .39);
   }
 }
 
-.container article
-
-.kratos-post-nav {
+.container article .kratos-post-nav {
   padding: 10px 20px 10px 20px;
   color: #5a5a5a;
+
   a {
     color: #5a5a5a;
   }
@@ -1510,7 +1591,7 @@ ul.kratos-post-meta {
   }
 
   .kratos-post-inner-toc {
-    display: none!important; // So it won't be overwritten by hbe decrypt func
+    display: none !important; // So it won't be overwritten by hbe decrypt func
     border: 2px dashed #ddd;
     border-radius: 10px;
     padding-top: 15px;
@@ -1518,7 +1599,7 @@ ul.kratos-post-meta {
 
   @media(max-width:991px) {
     .kratos-post-inner-toc {
-      display: block!important; // So it won't be overwritten by hbe decrypt func
+      display: block !important; // So it won't be overwritten by hbe decrypt func
     }
   }
 
@@ -1572,6 +1653,7 @@ ul.kratos-post-meta {
   overflow: hidden;
   margin: 20px;
   padding: 0;
+
   img {
     position: absolute;
     padding: 2px;
@@ -1605,7 +1687,7 @@ ul.kratos-post-meta {
       margin-right: 0;
     }
 
-    > span > * {
+    >span>* {
       display: inline-block;
     }
   }
@@ -1644,7 +1726,7 @@ ul.kratos-post-meta {
 
 .kratos-entry-header {
   margin-bottom: 0;
-  
+
   .kratos-post-meta a {
     color: #777676;
   }
@@ -1796,10 +1878,12 @@ ul.kratos-post-meta {
     margin-bottom: 12px;
     color: #333;
   }
+
   .qr-pay img {
     width: 200px;
     height: 200px;
   }
+
   .choose-pay {
     margin-top: 6px;
 
@@ -1840,8 +1924,9 @@ ul.kratos-post-meta {
     font-size: 12px;
     line-height: 13px;
     padding: 2px 5px;
-  
-    &:focus, &:hover {
+
+    &:focus,
+    &:hover {
       background: #8d8d8d;
       color: #fff !important;
     }
@@ -1859,10 +1944,13 @@ ul.kratos-post-meta {
     display: block;
     margin: 10px 0 -20px;
   }
-  &-plain, &-wrap {
+
+  &-plain,
+  &-wrap {
     position: relative;
     text-align: center;
   }
+
   &-plain {
     display: inline-block !important;
     box-sizing: border-box;
@@ -1922,7 +2010,8 @@ ul.kratos-post-meta {
         transform: rotate(45deg);
       }
 
-      canvas, img {
+      canvas,
+      img {
         margin: 15px;
         height: auto;
         max-width: 100%;
@@ -1949,22 +2038,52 @@ ul.kratos-post-meta {
 }
 
 @keyframes widget-title-icon-animation {
-    0%, 25%, 50%, 75%, 100% {transform: rotate(0);}
-    12%, 63% {transform: rotate(10deg);}
-    37%, 88%  {transform: rotate(-10deg);}
+
+  0%,
+  25%,
+  50%,
+  75%,
+  100% {
+    transform: rotate(0);
+  }
+
+  12%,
+  63% {
+    transform: rotate(10deg);
+  }
+
+  37%,
+  88% {
+    transform: rotate(-10deg);
+  }
 }
- 
+
 @-webkit-keyframes widget-title-icon-animation {
-  0%, 25%, 50%, 75%, 100% {-webkit-transform: rotate(0);}
-  12%, 63% {-webkit-transform: rotate(10deg);}
-  37%, 88%  {-webkit-transform: rotate(-10deg);}
+
+  0%,
+  25%,
+  50%,
+  75%,
+  100% {
+    -webkit-transform: rotate(0);
+  }
+
+  12%,
+  63% {
+    -webkit-transform: rotate(10deg);
+  }
+
+  37%,
+  88% {
+    -webkit-transform: rotate(-10deg);
+  }
 }
 
 #kratos-widget-area {
 
   user-select: none;
-  
-  > .sticky-area {
+
+  >.sticky-area {
     top: 56px;
     position: sticky;
     transition: .5s all;
@@ -1976,19 +2095,20 @@ ul.kratos-post-meta {
     background-color: #fff;
     box-shadow: 0 1px 2px rgba(0, 0, 0, .1);
     border-radius: 0;
-  
+
     &:last-child {
       margin: 0;
     }
-  
-    > .widget-title {
+
+    >.widget-title {
       position: relative;
       margin: 0 0 10px;
       padding-bottom: 12px;
       border-bottom: 1px solid #e7e7e7;
       font-size: 16px;
-  
-      &:not(.no-after)::after, > .toc-progress-bar {
+
+      &:not(.no-after)::after,
+      >.toc-progress-bar {
         position: absolute;
         left: 0;
         bottom: 0;
@@ -1998,57 +2118,57 @@ ul.kratos-post-meta {
         content: '';
         height: 2px !important
       }
-  
+
       i {
         margin-right: 10px;
       }
     }
-  
-    &:hover > .widget-title i {
+
+    &:hover>.widget-title i {
       animation: widget-title-icon-animation .5s linear;
       -webkit-animation: widget-title-icon-animation .5s linear;
     }
-  
+
     img {
       max-width: 100%;
       height: auto;
     }
-  
+
     a {
       color: #666;
       text-decoration: none;
       -webkit-transition: .4s;
       transition: .4s;
-  
+
       &:hover {
         color: #618eba;
       }
     }
-  
+
     li {
       padding-top: 2px;
       padding-bottom: 2px;
     }
-  
+
     .children {
       padding-left: 30px;
     }
 
     &.widget-kratos {
-  
+
       &-about {
         padding-left: 0;
         padding-right: 0;
         padding-top: 0;
-    
+
         .photo-background {
           -webkit-background-size: cover;
           background-size: cover;
         }
-    
+
         .photo-wrapper {
           width: 100%;
-    
+
           img {
             margin: -50px 0 0;
             width: 90px;
@@ -2058,35 +2178,37 @@ ul.kratos-post-meta {
             border-radius: 50%;
           }
         }
-    
+
         .photo-background {
           height: 120px;
         }
-    
+
         .textwidget {
           margin: 10px 0 30px 0;
         }
-    
+
         p {
           margin-bottom: 1em;
           font-size: 16px;
           margin: 20px;
         }
-  
+
         .site-meta {
           display: flex;
           flex-direction: row;
           justify-content: space-around;
 
-          > .meta-item {
+          >.meta-item {
             display: flex;
             flex-direction: column;
             padding: .5rem 1rem;
             border-radius: 5px;
+
             &:hover {
               background-color: #efefefaa;
             }
-            > * {
+
+            >* {
               display: flex;
               justify-content: center;
             }
@@ -2096,23 +2218,23 @@ ul.kratos-post-meta {
 
       &-ad {
         padding: 5px;
-      
+
         .img-responsive {
           display: block;
           max-width: 100%;
           height: auto;
         }
-      
+
         h4 {
           margin: 10px 20px 5px;
         }
-      
+
         img {
           max-width: 100%;
           height: auto;
         }
       }
-      
+
       &-tags {
         .tag-clouds a {
           display: inline-block;
@@ -2129,12 +2251,15 @@ ul.kratos-post-meta {
       &-posts {
         .tab-content {
           margin: 0 8px -18px 8px;
-          > .tab-pane {
+
+          >.tab-pane {
             display: none;
           }
-          > .active {
+
+          >.active {
             display: block;
           }
+
           .list-group a {
             overflow: hidden;
             border-bottom: 1px dashed #b4afaf;
@@ -2143,18 +2268,18 @@ ul.kratos-post-meta {
             white-space: nowrap;
             -webkit-transition: color .3s;
             transition: color .3s;
-      
+
             &:last-child {
               border-bottom: 0;
             }
           }
         }
-      
+
         .list-group {
           padding-left: 0;
           margin-bottom: 20px;
         }
-      
+
         .list-group-item {
           position: relative;
           display: block;
@@ -2162,23 +2287,25 @@ ul.kratos-post-meta {
           padding: 8px 0;
           border: 0;
           background-color: unset;
-      
+
           &:first-child {
             margin-top: 1px;
           }
-      
+
           i {
             margin: 0 5px 0 0;
           }
         }
       }
 
-      &-archive, &-categories {
+      &-archive,
+      &-categories {
         ul {
           list-style: none;
           padding: 0;
           margin: 0;
         }
+
         li {
           &::before {
             font-family: fontawesome;
@@ -2187,20 +2314,20 @@ ul.kratos-post-meta {
           }
         }
       }
-      
+
       &-archive li::before {
         content: '\f133';
       }
-      
+
       &-categories {
         li {
           margin-left: 10px;
-      
+
           &::before {
             content: '\f114';
           }
         }
-      
+
         .category-list-item .category-list-count {
           float: right;
           margin-right: 20px;
@@ -2215,14 +2342,15 @@ ul.kratos-post-meta {
   #krw-toc {
     // Use important to prevent its style being by hbe decrypt func 
     // (https://github.com/D0n9X1n/hexo-blog-encrypt/blob/7a820d3bd1b2d1f6aa748f870230f892fd72b330/lib/hbe.js#L213-L218)
-    display: block!important;
+    display: block !important;
 
     .toc {
       padding: 0;
       overflow: auto;
     }
+
     .toc-item {
-      > a {
+      >a {
         display: block;
         padding-left: 1em;
         position: relative;
@@ -2233,10 +2361,10 @@ ul.kratos-post-meta {
       }
 
       &.active {
-        > a {
+        >a {
           color: #fff;
           background: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
-    
+
           &::before {
             position: absolute;
             width: 0;
@@ -2252,20 +2380,21 @@ ul.kratos-post-meta {
         }
       }
 
-      &.active > a::before {
+      &.active>a::before {
         border-left-color: #fff;
       }
     }
   }
 }
 
-.widget-kratos-toc, .kratos-post-inner-toc {
+.widget-kratos-toc,
+.kratos-post-inner-toc {
   .toc-child {
     padding-left: 1rem;
   }
 }
 
-body.nav-up #kratos-widget-area > .sticky-area {
+body.nav-up #kratos-widget-area>.sticky-area {
   top: 15px;
 }
 
@@ -2275,7 +2404,9 @@ body.nav-up #kratos-widget-area > .sticky-area {
 }
 
 .kr-tool {
-  .tool, .box {
+
+  .tool,
+  .box {
     right: 20px;
     -webkit-transition: .5s;
     transition: .5s;
@@ -2320,6 +2451,7 @@ body.scroll-down .kr-tool {
   .tool {
     bottom: 60px;
   }
+
   .box.gotop-box {
     bottom: 20px;
   }
@@ -2346,15 +2478,15 @@ body.scroll-down .kr-tool {
 
   .kratos-social-icons {
     padding-left: 0;
-  
+
     li {
       padding: 4px 14px;
-  
+
       a {
         display: inline-block;
         text-decoration: none;
 
-        > i {
+        >i {
           font-size: 36px;
         }
 
@@ -2363,7 +2495,7 @@ body.scroll-down .kr-tool {
           height: 36px;
         }
 
-        > * {
+        >* {
           display: inline-block;
           vertical-align: middle;
         }
@@ -2374,19 +2506,19 @@ body.scroll-down .kr-tool {
   .kratos-copyright {
     padding-left: 0;
     list-style: none;
-  
+
     div {
       line-height: 1.2;
       margin: 0 40px;
     }
-  
+
     li {
       color: rgba(255, 255, 255, .3);
       line-height: 1;
       margin: 0 2px;
       font-size: 12px;
     }
-  
+
     &:first-child {
       margin-top: 25px;
     }
@@ -2404,7 +2536,7 @@ body.scroll-down .kr-tool {
   ul {
     color: rgba(255, 255, 255, .15);
     padding: 0;
-  
+
     &:after {
       content: " ";
       clear: both;
@@ -2448,7 +2580,7 @@ body.scroll-down .kr-tool {
           margin: 0 0 7px 0;
           padding-left: 90px;
 
-          
+
         }
 
         p {
@@ -2457,7 +2589,8 @@ body.scroll-down .kr-tool {
           padding-left: 75px
         }
 
-        h4, p {
+        h4,
+        p {
           cursor: pointer;
           white-space: nowrap;
           text-overflow: ellipsis;
@@ -2493,6 +2626,7 @@ body.scroll-down .kr-tool {
 @media(max-width:992px) {
   .kratos-post-meta span {
     font-size: 12px;
+
     i:not(:first-child) {
       margin-left: 10px;
     }
@@ -2513,12 +2647,15 @@ body.scroll-down .kr-tool {
     &1 {
       font-size: 25px !important;
     }
+
     &2 {
       font-size: 21px;
     }
+
     &3 {
       font-size: 18px;
     }
+
     &4 {
       font-size: 15px;
     }
@@ -2536,7 +2673,8 @@ body.scroll-down .kr-tool {
     height: 60px;
     padding: 7px;
 
-    a, a:hover {
+    a,
+    a:hover {
       color: #fff !important;
     }
 
@@ -2579,7 +2717,8 @@ body.scroll-down .kr-tool {
     }
   }
 
-  #kratos-menu-wrap, .kratos-post-inner-new header .label {
+  #kratos-menu-wrap,
+  .kratos-post-inner-new header .label {
     display: none;
   }
 
@@ -2598,6 +2737,7 @@ body.scroll-down .kr-tool {
     height: auto;
     margin: 0 0 20px 0;
     padding: 0 0 60% 0;
+
     img {
       padding: 0;
       border: 0;
@@ -2618,7 +2758,8 @@ body.scroll-down .kr-tool {
     height: auto;
   }
 
-  .hide_notice, .info {
+  .hide_notice,
+  .info {
     font-size: 12px;
   }
 
@@ -2739,36 +2880,47 @@ body.scroll-down .kr-tool {
     &-1 {
       width: 8.33333333%;
     }
+
     &-2 {
       width: 16.66666667%;
     }
+
     &-3 {
       width: 25%;
     }
+
     &-4 {
       width: 33.33333333%;
     }
+
     &-5 {
       width: 41.66666667%;
     }
+
     &-6 {
       width: 50%;
     }
+
     &-7 {
       width: 58.33333333%;
     }
+
     &-8 {
       width: 66.66666667%;
     }
+
     &-9 {
       width: 75%;
     }
+
     &-10 {
       width: 83.33333333%;
     }
+
     &-11 {
       width: 91.66666667%;
     }
+
     &-12 {
       width: 100%;
     }
@@ -2776,7 +2928,9 @@ body.scroll-down .kr-tool {
 
   .page404 .errtxt {
     margin-top: 15%;
-    h5, p {
+
+    h5,
+    p {
       margin-top: 30px;
     }
   }
@@ -2896,6 +3050,7 @@ td.code {
     height: auto;
     margin: 0 0 20px 0;
     padding: 0 0 60% 0;
+
     img {
       padding: 0;
       border: 0
@@ -2906,28 +3061,28 @@ td.code {
 
 span.blur {
   text-shadow: 0 0 .5em rgb(0, 0, 0);
-  color: rgba(1, 1, 1, .1)!important;
+  color: rgba(1, 1, 1, .1) !important;
   transition: .2s;
 
   &:hover {
     text-shadow: 0 0 0;
-    color:#000000!important;
+    color: #000000 !important;
   }
 }
 
 
 /**************** Search Page related ****************/
 #kr-search-notice.alert {
-  transition:.3s
+  transition: .3s
 }
 
 #result-posts {
   margin-top: 20px;
 
   .kr-search-result {
-    margin:auto;
-    height:auto;
-    width:90%;
+    margin: auto;
+    height: auto;
+    width: 90%;
     padding-top: 22px;
 
     .kratos-entry-content-new {
@@ -2936,8 +3091,8 @@ span.blur {
   }
 
   m {
-    color:#333;
-    background-color:yellow;
+    color: #333;
+    background-color: yellow;
   }
 }
 
@@ -2955,9 +3110,10 @@ span.blur {
     outline: 0;
   }
 
-  &:active, &:focus {
+  &:active,
+  &:focus {
     border-color: #3273dc;
-    box-shadow: 0 0 0 .125em rgba(50,115,220,.25)
+    box-shadow: 0 0 0 .125em rgba(50, 115, 220, .25)
   }
 }
 
@@ -2972,6 +3128,7 @@ span.blur {
     max-width: 100%;
     border: 1px solid transparent;
   }
+
   .btn.btn-primary {
     border: transparent;
     border-radius: 0 4px 4px 0;
@@ -3011,5 +3168,6 @@ body.custom-background {
   background-size: cover;
   background-attachment: fixed;
 }
+
 
 @import './kr-color/default.scss';
