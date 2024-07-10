@@ -637,10 +637,10 @@ has@^1.0.3:
   dependencies:
     function-bind "^1.1.1"
 
-hexo-bilibili-bangumi@^1.9.0:
-  version "1.9.0"
-  resolved "https://registry.yarnpkg.com/hexo-bilibili-bangumi/-/hexo-bilibili-bangumi-1.9.0.tgz#3293a1e34e31acb37506c951845b934e6968d6ba"
-  integrity sha512-ZzwFu3hlUlXLmLTjS9scd86n6oM7jisLK/FaWy57chnKgLPu44Yp1hTHZ5ALbFPnG+h52RYw+J1aU91NG4eITw==
+hexo-bilibili-bangumi@^1.10.1:
+  version "1.10.1"
+  resolved "https://registry.yarnpkg.com/hexo-bilibili-bangumi/-/hexo-bilibili-bangumi-1.10.1.tgz#a55cc46ec97e402c41fdcfad9c43721472bdf9b6"
+  integrity sha512-GeKnVsJussCl4q11vdYsH+Rn852kUCYdaB/3FXAzV3EHjLHGac/LuLtBmztX/7l+SK4VeTqaRWtJJLClTcNaSg==
   dependencies:
     "@babel/runtime" "^7.18.0"
     axios "^1.0.0"
